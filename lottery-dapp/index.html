@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        :root{
+            --this-page-content-width: 75%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            row-gap: 2rem;
+        }
+        header{
+            width: 100%;
+            height: 11rem;
+            color: white;
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+        h2{
+            font-size: 1.8rem;
+        }
+        .header-side{
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-side.left{
+            justify-content: end;
+            align-items: start;
+            padding-bottom: 0.5rem;
+        }
+        .header-side.left span{
+            font-size: 1rem;
+        }
+        .header-middle{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            row-gap: 1rem;
+        }
+        .header-side.right{
+            justify-content: start;
+            align-items: end;
+        }
+        .header-side.right button{
+            font-size: 1rem;
+            padding: 0.5em 1em;
+        }
+        .about{
+            display: flex;
+            column-gap: 3rem;
+            width: var(--this-page-content-width);
+        }
+        .about .me{
+            width: 30%;
+        }
+        .about .project{
+            width: 70%;
+            padding: 2rem;
+            box-shadow: 0px 0px 10px #9a9a9a;
+            border-radius: 5px;
+        }
+        .lottery{
+            display: flex;
+            width: var(--this-page-content-width);
+            column-gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .lottery .left{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 10px #9a9a9a;
+            border-radius: 5px;
+            width: 50%;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+        .lottery .operation{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            row-gap: 0.5rem;
+        }
+        .lottery .operation *{
+            font-size: 1.3rem;
+        }
+        .lottery .right{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            align-items: center;
+
+        }
+        .lottery .right>div{
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #9a9a9a;
+            padding: 1rem;
+            width: 80%;
+        }
+        .lottery  ul{
+            max-height: 6rem;
+            overflow-y: scroll;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+        <div id="liveToast" class="toast bg-success text-white" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+            <div class="toast-header">
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi deleniti dolore ea eligendi ex in iusto magnam modi temporibus?
+            </div>
+        </div>
+    </div>
+
+    <header class="has-background-black columns">
+        <div class="column is-one-third header-side left">
+            <span>create Date:</span>
+            <span>Owner: </span>
+        </div>
+        <div class="column is-one-third header-middle">
+            <h1>Ether</h1>
+            <h2>shiraz university</h2>
+        </div>
+        <div class="column is-one-third header-side right">
+            <button class="button is-link">hello</button>
+        </div>
+    </header>
+    <div class="about">
+        <div class="me">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">mahdi khatib</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, praesentium!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <h2>About This Project</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorum ea porro quos ratione repellat soluta! Accusamus culpa dolor facilis in labore neque nobis odio omnis, quaerat temporibus. Amet aspernatur atque autem corporis cum, dicta dignissimos dolor dolore dolores enim est ex fugit id in incidunt libero maiores nisi obcaecati possimus quaerat sed tempora voluptates? Beatae, eos voluptatum! Accusamus adipisci debitis ducimus esse explicabo, illo modi nostrum quasi tempore unde.</p>
+        </div>
+    </div>
+    <div class="lottery">
+        <div class="left">
+            <div class="operation">
+                <span>Enter Lottery By Sending 0.01 Ether</span>
+                <button class="button is-info is-light">Play Now</button>
+            </div>
+            <div class="operation">
+                <span><strong>Admins only: </strong>Pick Winner</span>
+                <button class="button is-primary is-light">Pick Winner</button>
+            </div>
+            <div class="operation">
+                <span><strong>Admins only: </strong>Pay Winner</span>
+                <button class="button is-success is-light">Pay Winner</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="history">
+                <h2>Lottery History</h2>
+                <ul>
+                    <li>
+                        <span>Lottery #1 Winner:</span>
+                        <br>
+                        <a href="#winner1">78awhdoj12id982yignj8uy3fklsl</a>
+                    </li>
+                    <li>
+                        <span>Lottery #2 Winner:</span>
+                        <br>
+                        <a href="#winner2">78awhdoj12id982yignj8uy3fklsl</a>
+                    </li>
+                    <li>
+                        <span>Lottery #3 Winner:</span>
+                        <br>
+                        <a href="#winner3">78awhdoj12id982yignj8uy3fklsl</a>
+                    </li>
+                    <li>
+                        <span>Lottery #4 Winner:</span>
+                        <br>
+                        <a href="#winner4">78awhdoj12id982yignj8uy3fklsl</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="players">
+                <h2>Players(1)</h2>
+                <ul>
+                    <li><a href="#winner5">78awhdoj12id982yignj8uy3fklsl</a></li>
+                    <li><a href="#winner6">78awhdoj12id982yignj8uy3fklsl</a></li>
+                    <li><a href="#winner7">78awhdoj12id982yignj8uy3fklsl</a></li>
+                    <li><a href="#winner8">78awhdoj12id982yignj8uy3fklsl</a></li>
+                </ul>
+            </div>
+            <div class="pot">
+                <h2>Pot</h2>
+                <span>o Ether</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        const toastLiveExample = document.getElementById('liveToast')
+        function showToast(){
+            const toast = new bootstrap.Toast(toastLiveExample);
+            toast.show();
+        }
+        showToast();
+    </script>
+</body>
+</html>
